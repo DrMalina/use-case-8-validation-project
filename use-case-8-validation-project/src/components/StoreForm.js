@@ -42,7 +42,7 @@ export function StoreForm() {
   );
 }
 
-export function Input({
+function Input({
   name,
   displayName,
   value,
@@ -66,10 +66,10 @@ export function Input({
   );
 }
 
-export function InputErrorMessage({ message }) {
+function InputErrorMessage({ message }) {
   return <span style={{ color: "red" }}>{message}</span>;
 }
 
-export function SubmitButton({ isDisabled }) {
+function SubmitButton({ isDisabled }) {
   return <input type="submit" disabled={isDisabled} />;
 }
