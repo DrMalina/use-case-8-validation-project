@@ -30,7 +30,9 @@ $ cd use-case-8-validation-project/
 $ npm install
 ```
 
-4. Start the app:
+## Run the app
+
+1. Start the app locally:
 ```
 $ npm start
 ```
