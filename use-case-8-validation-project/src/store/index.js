@@ -1,6 +1,6 @@
 import { combineReducers, createStore } from "redux";
 
-const Actions = {
+export const Actions = {
   SET_FORM_VALUES: "SET_FORM_VALUES",
 };
 

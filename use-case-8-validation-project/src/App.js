@@ -1,7 +1,7 @@
+import { StoreForm } from "./components/StoreForm";
+
 function App() {
-  return (
-    <p>Hello, World!</p>
-  );
+  return <StoreForm />;
 }
 
 export default App;
