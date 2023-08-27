@@ -16,7 +16,7 @@ export function StoreForm() {
     updateInputValuesInStore();
     console.log("Information was recorded and could be further sent.");
     console.log({ inputValues });
-    alert("Successfully updated values in store");
+    alert("Successfully updated values");
   };
 
   const inputs = Object.keys(inputValues).map((name) => ({
