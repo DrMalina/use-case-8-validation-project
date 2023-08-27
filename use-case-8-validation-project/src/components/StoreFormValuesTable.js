@@ -1,27 +1,28 @@
 import { useFormSelector } from "../hooks/useFormSelector";
+import { reverseString } from "../utils/reverseString";
 
 const tableRowStyleOptions = { padding: "5px", border: "1px solid black" };
 
 export function StoreFormValuesTable() {
   const formValues = useFormSelector();
 
+  const formValuesEntries = Object.entries(formValues);
   const tableHeaders = Object.keys(formValues);
-  const tableValues = Object.values(formValues);
 
   return (
     <table>
       <caption>Form values in store</caption>
       <thead>
         <tr>
-          {tableHeaders.map((header, index) => (
-            <TableHeader key={`${index}-${header}`} name={header} />
+          {tableHeaders.map((header) => (
+            <TableHeader key={header} name={header} />
           ))}
         </tr>
       </thead>
       <tbody>
         <tr>
-          {tableValues.map((value, index) => (
-            <TableDataCell key={`${index}-${value}`} value={value} />
+          {formValuesEntries.map(([header, value]) => (
+            <TableDataCell key={reverseString(header)} value={value} />
           ))}
         </tr>
       </tbody>
